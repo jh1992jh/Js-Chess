@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.board {
+    border: 1px solid black;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    color: red;
+    font-size: 1rem;
+    position: absolute;
+    z-index: 1080;
+}
+
+.board .square {
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board .square:hover {
+    background: rgba(100,100,250, 0.2);
+    transition: 0.2s;
+}
+
+.board .square img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    z-index: -1;
+    animation: fadeIn 0.5s linear;
+}
+
+img::selection {
+    background: transparent;
+}
+
+.board .black-square {
+    background: rgba(0,0,0, 0.2);
+}
+
+.board .picked {
+    background: rgba(100,100,250, 0.2) !important;
+}
+
+ .berlinDefence{
+    position: fixed;
+    top: 10%;
+    left: 15%;
+    background: transparent;
+    border-radius: 50px;
+    border: 2px solid black;
+    padding: 1em;
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
